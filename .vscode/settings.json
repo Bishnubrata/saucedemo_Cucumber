@@ -1,0 +1,18 @@
+{
+    // Settings for the Alexander Krechik extension
+    "cucumberautocomplete.steps": [
+        "steps/**/*.ts",
+        "support/**/*.ts"
+    ],
+    "cucumberautocomplete.syncfeatures": "features/**/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+
+    // Settings for the Official Cucumber extension
+    "cucumber.glue": [
+        "steps/**/*.ts",
+        "support/**/*.ts"
+    ],
+    "cucumber.features": [
+        "features/**/*.feature"
+    ]
+}

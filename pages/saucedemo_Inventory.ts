@@ -8,6 +8,7 @@ export class SaucedemoInventory {
     readonly itemPrices: Locator;
     readonly cartIcon: Locator;
     readonly addToCartButtons: Locator;
+    readonly cartBadge: Locator; // NEW
 
     constructor(page: Page) {
         this.page = page;
@@ -17,6 +18,7 @@ export class SaucedemoInventory {
         this.itemPrices = page.locator('.inventory_item_price');
         this.cartIcon = page.locator('.shopping_cart_link');
         this.addToCartButtons = page.locator('button:has-text("Add to cart")');
+        this.cartBadge = page.locator('.shopping_cart_badge'); // NEW
     }
 
     async verifyIsLoaded() {
@@ -48,5 +50,18 @@ export class SaucedemoInventory {
 
     async navigateToCart() {
         await this.cartIcon.click();
+    }
+
+    // NEW METHOD: Reads the red notification badge on the inventory page
+    async getCartBadgeCount() {
+        // SauceDemo completely removes the badge from the DOM when the cart is 0
+        const isVisible = await this.cartBadge.isVisible();
+        if (!isVisible) {
+            return 0;
+        }
+        
+        // Grab the text and convert it from a string to a number
+        const text = await this.cartBadge.innerText();
+        return parseInt(text);
     }
 }

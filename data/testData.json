@@ -1,0 +1,17 @@
+{
+  "credentials": {
+    "validUser": "standard_user",
+    "validPassword": "secret_sauce",
+    "invalidUser": "invalid_user",
+    "invalidPassword": "wrong_password"
+  },
+  "inventorySettings": {
+    "expectedProductCount": 6,
+    "sortFilterValue": "lohi"
+  },
+  "cartSettings": {
+    "itemsToAdd": 2,
+    "itemsToRemove": 1,
+    "expectedFinalCount": 1
+  }
+}

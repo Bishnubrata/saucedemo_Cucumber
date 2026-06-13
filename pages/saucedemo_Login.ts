@@ -1,5 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test';
 
+
 export class SaucedemoLogin {
     readonly page: Page;
     readonly usernameInput: Locator;
@@ -16,9 +17,9 @@ export class SaucedemoLogin {
     }
 
     async navigate() {
-        // Fetch the URL from the .env file. 
-        // If it can't find SAUCE_URL, it safely falls back to the hardcoded string.
-        const url = process.env.SAUCE_URL as string
+        // Fetch the URL from the .env file.
+        // @ts-ignore
+        const url = process.env.SAUCE_URL || 'https://www.saucedemo.com/';
         await this.page.goto(url);
     }
 

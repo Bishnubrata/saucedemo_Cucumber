@@ -3,14 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "cucumber": "cucumber-js features/**/*.feature --require-module ts-node/register --require support/**/*.ts --require steps/**/*.ts --format html:cucumber-report.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@cucumber/cucumber": "^13.0.0",
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.2"
+    "@types/node": "^25.9.3",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
     "dotenv": "^17.4.2"
