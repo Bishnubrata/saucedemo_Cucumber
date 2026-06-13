@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "cucumber": "cucumber-js features/**/*.feature --require-module ts-node/register --require support/**/*.ts --require steps/**/*.ts --format html:cucumber-report.html"
+    "cucumber": "cucumber-js features/**/*.feature --require-module ts-node/register --require support/**/*.ts --require steps/**/*.ts --format html:reports/cucumber-report.html"
   },
   "keywords": [],
   "author": "",
