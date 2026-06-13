@@ -1,7 +1,5 @@
 Feature: SauceDemo E2E Continuous Flow
-  As a standard user
-  I want to log in and manage my cart
-  So that I can complete my shopping journey
+  As a standard user, I want to log in and manage my cart
 
   Scenario: Execute complete shopping flow
     Given I navigate to the SauceDemo login page
